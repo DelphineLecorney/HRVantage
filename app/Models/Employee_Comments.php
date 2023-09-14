@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Employee_Comments extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'employee_id',
+        'comment',
+        'comment_date',
+    ];
 }
