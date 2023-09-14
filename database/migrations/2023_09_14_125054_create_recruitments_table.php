@@ -12,7 +12,7 @@ return new class() extends Migration {
     {
         Schema::create('recruitments', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('positions_id')->constrained('positions');
+            $table->foreignId('position_id')->constrained('positions');
             $table->string('name', 100);
             $table->string('firstname', 100);
             $table->date('request_date');
