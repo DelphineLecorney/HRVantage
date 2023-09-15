@@ -15,7 +15,12 @@ return new class() extends Migration {
             $table->foreignId('position_id')->constrained('positions');
             $table->string('name', 100);
             $table->string('firstname', 100);
-            $table->date('request_date');
+            $table->string('email', 100);
+            $table->string('phone', 100);
+            $table->string('address', 100);
+            $table->string('city', 100);
+            $table->string('zip_code', 100);
+            $table->string('country', 100);
             $table->string('document', 100);
             $table->string('status', 100);
             $table->timestamps();

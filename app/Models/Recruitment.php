@@ -9,5 +9,17 @@ class Recruitment extends Model
 {
     use HasFactory;
 
-    protected $fillable = 'recruitments';
+    protected $fillable = [
+        'position_id',
+        'name',
+        'firstname',
+        'email',
+        'phone',
+        'address',
+        'city',
+        'zip_code',
+        'country',
+        'document',
+        'status',
+    ];
 }
