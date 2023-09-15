@@ -12,6 +12,7 @@ return new class() extends Migration {
     {
         Schema::create('employees', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('position_id')->constrained('positions');
             $table->string('name', 100);
             $table->string('firstname', 100);
             $table->string('email', 100)->unique();

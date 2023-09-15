@@ -18,8 +18,10 @@ class VacationFactory extends Factory
     {
         return [
             'employee_id' => $this->faker->numberBetween(1, 10),
+            'name' => $this->faker->sentence(3),
             'start_date' => $this->faker->dateTimeBetween('-1 years', 'now'),
             'end_date' => $this->faker->dateTimeBetween('now', '+1 years'),
+            'document' => $this->faker->sentence(3),
             'status' => $this->faker->randomElement(['approved', 'rejected', 'pending']),
         ];
     }

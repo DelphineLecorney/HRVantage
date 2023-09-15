@@ -14,10 +14,10 @@ return new class() extends Migration {
             $table->id();
             $table->foreignId('employee_id')->constrained();
             $table->string('name', 100);
-            $table->string('institution', 100);
             $table->date('start_date');
             $table->date('end_date');
             $table->string('document', 100);
+            $table->string('status', 100);
             $table->timestamps();
         });
     }
