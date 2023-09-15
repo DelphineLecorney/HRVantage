@@ -9,5 +9,10 @@ class Vacation extends Model
 {
     use HasFactory;
 
-    protected $fillable = 'vacations';
+    protected $fillable = [
+        'employee_id',
+        'start_date',
+        'end_date',
+        'status',
+    ];
 }
