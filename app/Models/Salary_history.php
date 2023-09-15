@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Salary_history extends Model
 {
     use HasFactory;
+
+    protected $fillable = 'salary_histories';
 }

@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Termination extends Model
 {
     use HasFactory;
+
+    protected $fillable = 'terminations';
 }

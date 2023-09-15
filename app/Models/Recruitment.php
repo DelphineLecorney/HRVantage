@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Recruitment extends Model
 {
     use HasFactory;
+
+    protected $fillable = 'recruitments';
 }
