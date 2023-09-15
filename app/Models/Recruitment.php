@@ -9,6 +9,11 @@ class Recruitment extends Model
 {
     use HasFactory;
 
+    public function position()
+    {
+        return $this->belongsTo(Position::class);
+    }
+
     protected $fillable = [
         'position_id',
         'name',

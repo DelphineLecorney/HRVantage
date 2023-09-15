@@ -17,7 +17,7 @@ class VacationFactory extends Factory
     public function definition(): array
     {
         return [
-            'employee_id' => $this->faker->numberBetween(1, 10),
+            'employee_id' => $this->faker->numberBetween(1, 50),
             'name' => $this->faker->sentence(3),
             'start_date' => $this->faker->dateTimeBetween('-1 years', 'now'),
             'end_date' => $this->faker->dateTimeBetween('now', '+1 years'),

@@ -9,5 +9,16 @@ class Employee_Document extends Model
 {
     use HasFactory;
 
-    protected $fillable = 'employee_documents';
+    public function employee()
+    {
+        return $this->belongsTo(Employee::class);
+    }
+
+    protected $fillable = [
+        'employee_id',
+        'name',
+        'firstname',
+        'description',
+        'file',
+    ];
 }

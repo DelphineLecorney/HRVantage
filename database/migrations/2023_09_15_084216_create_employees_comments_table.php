@@ -10,11 +10,11 @@ return new class() extends Migration {
      */
     public function up(): void
     {
-        Schema::create('employee_benefit_enrollments', function (Blueprint $table) {
+        Schema::create('_employees__comments', function (Blueprint $table) {
             $table->id();
             $table->foreignId('employee_id')->constrained('employees');
-            $table->foreignId('social_benefit_id')->constrained('social_benefits');
-            $table->date('enrollment_date');
+            $table->foreignId('position_id')->constrained('positions');
+            $table->text('comment', 100);
             $table->timestamps();
         });
     }
@@ -24,6 +24,6 @@ return new class() extends Migration {
      */
     public function down(): void
     {
-        Schema::dropIfExists('employee_benefit_enrollments');
+        Schema::dropIfExists('_employees__comments');
     }
 };

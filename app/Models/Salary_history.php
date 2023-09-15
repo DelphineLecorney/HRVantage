@@ -9,5 +9,20 @@ class Salary_history extends Model
 {
     use HasFactory;
 
-    protected $fillable = 'salary_histories';
+    public function employee()
+    {
+        return $this->belongsTo(Employee::class);
+    }
+
+    public function position()
+    {
+        return $this->belongsTo(Position::class);
+    }
+
+    protected $fillable = [
+        'employee_id',
+        'position_id',
+        'amount',
+        'date',
+    ];
 }

@@ -12,7 +12,7 @@ return new class() extends Migration {
     {
         Schema::create('vacations', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('employee_id')->constrained();
+            $table->foreignId('employee_id')->constrained('employees');
             $table->string('name', 100);
             $table->date('start_date');
             $table->date('end_date');

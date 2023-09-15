@@ -5,14 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Employee_Benefit_Enrollment extends Model
+class Socialbenefit extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'employee_id',
-        'benefit_id',
-        'enrollment_date',
-        'is_enrolled',
+        'name',
+        'description',
+        'type',
+        'amount',
+        'status',
+        'created_at',
+        'updated_at',
     ];
 }

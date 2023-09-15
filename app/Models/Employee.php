@@ -9,8 +9,19 @@ class Employee extends Model
 {
     use HasFactory;
 
+    public function position()
+    {
+        return $this->belongsTo(Position::class);
+    }
+
+    public function socialbenefit()
+    {
+        return $this->belongsTo(Socialbenefit::class);
+    }
+
     protected $fillable = [
         'position_id',
+        'socialbenefit_id',
         'name',
         'firstname',
         'email',

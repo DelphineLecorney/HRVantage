@@ -9,5 +9,20 @@ class Termination extends Model
 {
     use HasFactory;
 
-    protected $fillable = 'terminations';
+    public function employee()
+    {
+        return $this->belongsTo(Employee::class);
+    }
+
+    public function position()
+    {
+        return $this->belongsTo(Position::class);
+    }
+
+    protected $fillable = [
+        'employee_id',
+        'position_id',
+        'date',
+        'comment',
+    ];
 }

@@ -10,12 +10,12 @@ return new class() extends Migration {
      */
     public function up(): void
     {
-        Schema::create('_terminations', function (Blueprint $table) {
+        Schema::create('salary_histories', function (Blueprint $table) {
             $table->id();
             $table->foreignId('employee_id')->constrained('employees');
             $table->foreignId('position_id')->constrained('positions');
+            $table->decimal('amount', 10, 2);
             $table->date('date');
-            $table->text('comment', 100);
             $table->timestamps();
         });
     }
@@ -25,6 +25,6 @@ return new class() extends Migration {
      */
     public function down(): void
     {
-        Schema::dropIfExists('_terminations');
+        Schema::dropIfExists('salary_histories');
     }
 };
