@@ -1,6 +1,6 @@
 # HRVantage - A Human Resources Management System
 
-![Work in Progress]()
+![Work in Progress](https://github.com/DelphineLecorney/HRVantage/blob/master/public/Work.JPG)
 
 ## Description
 
