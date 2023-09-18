@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class AuthController extends Controller
@@ -22,6 +23,17 @@ class AuthController extends Controller
             'phone' => 'required|numeric',
             'password' => 'required|string|min:8|confirmed',
         ]);
+
+        $user = User::create([
+            'name' => $request->name,
+            'firstname' => $request->firstname,
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'password' => bcrypt($request->password),
+        ]);
+        auth()->login($user);
+
+        return redirect()->route('dashboard');
     }
 
     // 'showLoginForm' method: Displays the login form.
