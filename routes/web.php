@@ -17,7 +17,12 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
 
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
+
 Route::group(['prefix' => 'auth'], function () {
-    Route::post('/login', [AuthController::class, 'login'])->name('login');
     Route::post('/register', [AuthController::class, 'register'])->name('register');
+    Route::post('/login', [AuthController::class, 'login'])->name('login');
+    Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 });

@@ -31,5 +31,8 @@ class AuthController extends Controller
             'email' => 'required|string|email',
             'password' => 'required|string',
         ]);
+        if (auth()->attempt(['email' => $request->email, 'password' => $request->password])) {
+            return redirect()->route('dashboard');
+        }
     }
 }
