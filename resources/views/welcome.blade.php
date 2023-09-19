@@ -1,3 +1,4 @@
+@extends('layouts.app')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
 <body>
+    @section('content')
 <header class="jumbotron text-center">
     <h1 class="display-4">Bienvenue dans HRVantage</h1>
     <p class="lead">Votre Solution de Gestion des Ressources Humaines</p>
@@ -27,10 +29,7 @@
         </ul>
     </section>
 </main>
-
-<footer class="bg-dark text-light text-center py-3">
-    <p>&copy; 2023 HRVantage. Tous droits réservés.</p>
-</footer>
+@endsection
 
 </body>
 </html>
