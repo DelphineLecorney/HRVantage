@@ -1,6 +1,13 @@
-@extends('layouts.app')
-
-@section('content')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <title>HRVantage - Système de Gestion des Ressources Humaines</title>
+<body>
+    <main class="min-vh-100">
     <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-md-6">
@@ -37,4 +44,11 @@
             </div>
         </div>
     </div>
-@endsection
+</main>
+    <footer class="footer">
+    <div class="justify-content-end text-center">
+        <p>&copy; 2023 HRVantage. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
+
