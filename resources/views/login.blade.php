@@ -50,8 +50,6 @@
         <p>&copy; 2023 HRVantage. All rights reserved.</p>
     </div>
 </footer>
-
-
 </body>
 </html>
 

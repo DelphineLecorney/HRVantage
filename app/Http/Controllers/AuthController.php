@@ -27,9 +27,7 @@ class AuthController extends Controller
             'email' => $request->email,
             'password' => bcrypt($request->password),
         ]);
-
-
-        return redirect()->route('dashboard');
+        return redirect()->route('login');
     }
 
     // 'showLoginForm' method: Displays the login form.
@@ -39,9 +37,11 @@ class AuthController extends Controller
             'email' => 'required|string|email',
             'password' => 'required|string',
         ]);
+    
         if (auth()->attempt(['email' => $request->email, 'password' => $request->password])) {
-            return redirect()->route('login');
+            return redirect()->route('dashboard');
         }
     }
+    
 
 }
