@@ -50,10 +50,9 @@
 </nav>
 
     </header>
-    <main>
+    <main class ="min-vh-100">
         @yield('content')
     </main>
-    <br><br><br>
     <footer class="footer mt-auto py-3 bg-light">
         <div class="justify-content-end text-center">
             <p>&copy; 2023 HRVantage. Tous droits réservés.</p>
