@@ -13,7 +13,6 @@
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-header">{{ __('Register') }}</div>
-
                     <div class="card-body">
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
@@ -49,7 +48,7 @@
         </div>
     </div>
 </main>
-    <footer class="footer">
+    <footer class="footer bg-light">
     <div class="justify-content-end text-center">
         <p>&copy; 2023 HRVantage. All rights reserved.</p>
     </footer>

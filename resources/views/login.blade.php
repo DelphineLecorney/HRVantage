@@ -45,10 +45,13 @@
         </div>
     </div>
 </main>
-    <footer class="footer">
+<footer class="footer bg-light">
     <div class="justify-content-end text-center">
         <p>&copy; 2023 HRVantage. All rights reserved.</p>
-    </footer>
+    </div>
+</footer>
+
+
 </body>
 </html>
 

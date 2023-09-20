@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
+use App\Models\User;
 use App\Models\Employee;
 use App\Models\Position;
 use App\Models\Recruitment;
@@ -20,6 +21,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        User::factory()->count(10)->create();
         Position::factory()->count(10)->create();
         Recruitment::factory()->count(10)->create();
         SocialBenefit::factory()->count(10)->create();
