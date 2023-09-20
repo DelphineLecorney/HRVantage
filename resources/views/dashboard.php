@@ -9,7 +9,7 @@
 
                     <div class="card-body">
                         {{-- Contenu --}}
-                        <p>Bienvenue sur votre tableau de bord !</p>
+                        <p>Welcome to your dashboard !</p>
                     </div>
                 </div>
             </div>

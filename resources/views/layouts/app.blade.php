@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 
-    <title>HRVantage - Système de Gestion des Ressources Humaines</title>
+    <title>HRVantage - Human Resources Management System</title>
 </head>
 <body>
     <header>
@@ -39,8 +39,6 @@
         </li>
       </ul>
       <form class="d-flex">
-        <a class="btn btn-outline-success" href="http://127.0.0.1:8000/register">Register</a><br>
-        <a class="btn btn-outline-success" href="http://127.0.0.1:8000/login">Login</a><br>
         <a class="btn btn-outline-success" href="http://127.0.0.1:8000/logout">Logout</a>
         </form>
 
@@ -54,7 +52,7 @@
     </main>
     <footer class="footer mt-auto py-3 bg-light">
         <div class="justify-content-end text-center">
-            <p>&copy; 2023 HRVantage. Tous droits réservés.</p>
+            <p>&copy; 2023 HRVantage. All rights reserved.</p>
         </div>
     </footer>
 
