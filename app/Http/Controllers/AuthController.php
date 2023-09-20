@@ -18,20 +18,16 @@ class AuthController extends Controller
     {
         $request->validate([
             'name' => 'required|string|max:255',
-            'firstname' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
-            'phone' => 'required|numeric',
             'password' => 'required|string|min:8|confirmed',
         ]);
 
         $user = User::create([
             'name' => $request->name,
-            'firstname' => $request->firstname,
             'email' => $request->email,
-            'phone' => $request->phone,
             'password' => bcrypt($request->password),
         ]);
-        auth()->login($user);
+
 
         return redirect()->route('dashboard');
     }
@@ -44,7 +40,8 @@ class AuthController extends Controller
             'password' => 'required|string',
         ]);
         if (auth()->attempt(['email' => $request->email, 'password' => $request->password])) {
-            return redirect()->route('dashboard');
+            return redirect()->route('login');
         }
     }
+
 }
