@@ -27,6 +27,14 @@ Route::get('/login', function () {
     return view('login');
 })->name('login');
 
+Route::get('/employee', function () {
+    return view('employee');
+})->name('employee');
+
+Route::get('/position', function () {
+    return view('position');
+})->name('position');
+
 Route::post('/auth/login', [AuthController::class, 'login'])->name('auth.login');
 Route::post('/auth/logout', [AuthController::class, 'logout'])->name('auth.logout');
 Route::post('/auth/register', [AuthController::class, 'register'])->name('auth.register');
