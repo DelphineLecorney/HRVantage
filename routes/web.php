@@ -35,6 +35,26 @@ Route::get('/position', function () {
     return view('position');
 })->name('position');
 
+Route::get('/recruitment', function () {
+    return view('recruitment');
+})->name('recruitment');
+
+Route::get('/socialbenefit', function () {
+    return view('socialbenefit');
+})->name('socialbenefit');
+
+Route::get('/termination', function () {
+    return view('termination');
+})->name('termination');
+
+Route::get('/training', function () {
+    return view('training');
+})->name('training');
+
+Route::get('/vacation', function () {
+    return view('vacation');
+})->name('vacation');
+
 Route::post('/auth/login', [AuthController::class, 'login'])->name('auth.login');
 Route::post('/auth/logout', [AuthController::class, 'logout'])->name('auth.logout');
 Route::post('/auth/register', [AuthController::class, 'register'])->name('auth.register');
