@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,10 +23,6 @@ Route::get('/register', function () {
     return view('register');
 })->name('register');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard')->middleware('auth');
-
 Route::get('/login', function () {
     return view('login');
 })->name('login');
@@ -33,3 +30,5 @@ Route::get('/login', function () {
 Route::post('/auth/login', [AuthController::class, 'login'])->name('auth.login');
 Route::post('/auth/logout', [AuthController::class, 'logout'])->name('auth.logout');
 Route::post('/auth/register', [AuthController::class, 'register'])->name('auth.register');
+
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard')->middleware('auth');

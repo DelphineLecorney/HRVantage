@@ -1,4 +1,4 @@
-@extends('layouts.app') {{-- Fichier resources/views/layouts/app.blade.php --}}
+@extends('layouts.app')
 
 @section('content')
     <div class="container">
@@ -9,7 +9,7 @@
 
                     <div class="card-body">
                         {{-- Contenu --}}
-                        <p>Welcome to your dashboard !</p>
+                        <p>Welcome to your dashboard!</p>
                     </div>
                 </div>
             </div>

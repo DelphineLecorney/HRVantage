@@ -7,51 +7,43 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <title>HRVantage - Human Resources Management System</title>
 <body>
-    <main class="min-vh-100">
-    <div class="container mt-5">
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-header">{{ __('Register') }}</div>
-                    <div class="card-body">
-                        <form method="POST" action="{{ route('auth.register') }}">
-                            @csrf
+<main class="min-vh-100 d-flex justify-content-center align-items-center">
+        <div class="card">
+            <div class="card-header">{{ __('Register') }}</div>
+            <div class="card-body">
+                <form method="POST" action="{{ route('auth.register') }}">
+                    @csrf
 
-                            <div class="mb-3">
-                                <label for="name" class="form-label">{{ __('Name') }}</label>
-                                <input id="name" type="name" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="email" class="form-label">{{ __('E-mail address') }}</label>
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="password" class="form-label">{{ __('Password') }}</label>
-                                <input id="password" type="password" class="form-control" name="password" required>
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="password_confirmation" class="form-label">{{ __('Confirm Password') }}</label>
-                                <input id="password_confirmation" type="password" class="form-control" name="password_confirmation" required>
-                            </div>
-
-
-                            <div class="d-grid">
-                                <button type="submit" class="btn btn-primary">{{ __('Register') }}</button>
-                            </div>
-                        </form>
+                    <div class="form-group">
+                        <label for="name">{{ __('Name') }}</label>
+                        <input id="name" type="name" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
                     </div>
-                </div>
+
+                    <div class="form-group">
+                        <label for="email">{{ __('E-mail address') }}</label>
+                        <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">{{ __('Password') }}</label>
+                        <input id="password" type="password" class="form-control" name="password" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password_confirmation">{{ __('Confirm Password') }}</label>
+                        <input id="password_confirmation" type="password" class="form-control" name="password_confirmation" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block">{{ __('Register') }}</button>
+                </form>
             </div>
         </div>
-    </div>
-</main>
-    <footer class="footer bg-light">
+    </main>
+    <footer class="footer mt-auto py-3 bg-light">
     <div class="justify-content-end text-center">
         <p>&copy; 2023 HRVantage. All rights reserved.</p>
-    </footer>
+    </div>
+</footer>
 </body>
 </html>
 
