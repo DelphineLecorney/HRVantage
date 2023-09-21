@@ -39,7 +39,7 @@
         </li>
       </ul>
       <form class="d-flex">
-        <a class="btn btn-outline-success" href="http://127.0.0.1:8000/logout">Logout</a>
+        <a class="btn btn-outline-success" href="http://127.0.0.1:8000/login">Logout</a>
         </form>
 
     </div>

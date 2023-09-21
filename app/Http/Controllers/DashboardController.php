@@ -10,12 +10,5 @@ class DashboardController extends Controller
     {
         return view('dashboard');
     }
-
-    // 'logout' method: Logs the user out.
-    public function logout()
-    {
-        auth()->logout();
-        return redirect()->route('login');
-    }
     
 }
