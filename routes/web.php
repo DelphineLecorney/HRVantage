@@ -60,3 +60,4 @@ Route::post('/auth/logout', [AuthController::class, 'logout'])->name('auth.logou
 Route::post('/auth/register', [AuthController::class, 'register'])->name('auth.register');
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard')->middleware('auth');
+Route::post('/dashboard/get-number-of-employees', [DashboardController::class, 'getNumberOfEmployees'])->name('dashboard.getNumberOfEmployees')->middleware('auth');

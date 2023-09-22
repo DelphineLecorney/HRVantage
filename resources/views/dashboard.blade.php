@@ -1,4 +1,12 @@
+<?php
+
+namespace App\Http\Controllers;
+
+?>
+
 @extends('layouts.app')
+
+
 
 @section('content')
 <div class="container">
@@ -8,21 +16,28 @@
                 <div class="card-header">{{ __('Dashboard') }}</div>
 
                 <div class="card-body">
-                    <h3 class="mt-4 mb-4 text-primary">Key statistics :</h3>
+                    <h3 class="mt-4 mb-4 text-success" style="--bs-text-opacity: .5;">Key statistics :</h3>
                     <ul>
-                        <li>Total number of employees : </li>
+                        <li>Total number of employees :
+                            @php
+                            $response = app(\App\Http\Controllers\DashboardController::class)->getNumberOfEmployees();
+                            $data = json_decode($response->content(), true);
+                            echo $data['Number of employees'];
+                            @endphp
+
+                        </li>
                         <li>Vacant positions :</li>
                         <li>Recruitment in progress : </li>
                     </ul>
 
-                    <h3 class="mt-4 mb-4 text-primary">Tasks to be carried out :</h3>
+                    <h3 class="mt-4 mb-4 text-success" style="--bs-text-opacity: .5;">Tasks to be carried out :</h3>
                     <ul>
                         <li>Job interview with ........ on 15/10/2023.</li>
                         <li>Finalising the job description for the junior developer position.</li>
                         <li>To approve ........'s request for leave of absence.</li>
                     </ul>
 
-                    <h3 class="mt-4 mb-4 text-primary">Quick links :</h3>
+                    <h3 class="mt-4 mb-4 text-success" style="--bs-text-opacity: .5;">Quick links :</h3>
                     <ul>
                         <li><a href="{{ route('employee') }}">Managing employees</a></li>
                         <li><a href="{{ route('position') }}">Managing jobs</a></li>

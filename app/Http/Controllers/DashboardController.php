@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Employee;
+
 
 class DashboardController extends Controller
 {
@@ -10,5 +12,10 @@ class DashboardController extends Controller
     {
         return view('dashboard');
     }
-    
+
+    public function getNumberOfEmployees()
+    {
+        $numberOfEmployees = Employee::count();
+        return response()->json(['Number of employees' => $numberOfEmployees]);
+    }
 }
