@@ -1,12 +1,4 @@
-<?php
-
-namespace App\Http\Controllers;
-
-?>
-
 @extends('layouts.app')
-
-
 
 @section('content')
 <div class="container">
@@ -14,7 +6,7 @@ namespace App\Http\Controllers;
         <div class="col-md-8">
             <div class="card bg-light">
                 <div class="card-header mt-4 mb-4 text-center">
-                    <h2 class="text-dark display-4">Bienvenue, {{ $user->name }} !</h2>
+                    <h2 class="text-dark display-4">Welcome, {{ $user->name }} !</h2>
                 </div>
 
                 <div class="card-body">
