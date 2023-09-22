@@ -20,7 +20,7 @@
 
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-link active" aria-current="page" href="{{ route('dashboard') }}">Home</a>
+          <a class="nav-link active" aria-current="page" href="{{ route('dashboard') }}">Dashboard</a>
           <a class="nav-link" href="{{ route('employee') }}">Employee</a>
           <a class="nav-link" href="{{ route('position') }}">Position</a>
           <a class="nav-link" href="{{ route('recruitment') }}">Recruitment</a>
