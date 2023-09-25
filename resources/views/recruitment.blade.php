@@ -4,54 +4,22 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <br>
-            <h1>Suivi du Recrutement</h1>
-            <br>
-            <div class="card">
-                <div class="card-header">
-                    <h2>Poste 1 - Candidat 1</h2>
-                </div>
-                <div class="card-body">
-                    <h5>Étape actuelle: CV reçu</h5>
-                    <p>Date de soumission du CV: 10/01/2023</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header">
-                    <h2>Poste 1 - Candidat 2</h2>
-                </div>
-                <div class="card-body">
-                    <h5>Étape actuelle: CV reçu</h5>
-                    <p>Date de soumission du CV: 11/01/2023</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header">
-                    <h2>Poste 1 - Candidat 3</h2>
-                </div>
-                <div class="card-body">
-                    <h5>Étape actuelle: CV reçu</h5>
-                    <p>Date de soumission du CV: 12/01/2023</p>
-                </div>
-            </div>
+            <h1>Details of Recruitment</h1>
 
             <div class="card">
                 <div class="card-header">
-                    <h2>Poste 2 - Candidat 2</h2>
+                    <h2>{{ $recruitment->name }} {{ $recruitment->firstname }}</h2>
                 </div>
                 <div class="card-body">
-                    <h5>Étape actuelle: CV reçu</h5>
-                    <p>Date de soumission du CV: 10/01/2023</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-header">
-                    <h2>Poste 2 - Candidat 3</h2>
-                </div>
-                <div class="card-body">
-                    <h5>Étape actuelle: Entretien téléphonique</h5>
-                    <p>Date de l'entretien: 15/01/2023</p>
+                    <p><strong>Position:</strong> {{ $recruitment->position->name }}</p>
+                    <p><strong>Email:</strong> {{ $recruitment->email }}</p>
+                    <p><strong>Phone:</strong> {{ $recruitment->phone }}</p>
+                    <p><strong>Address:</strong> {{ $recruitment->address }}</p>
+                    <p><strong>City:</strong> {{ $recruitment->city }}</p>
+                    <p><strong>Zip Code:</strong> {{ $recruitment->zip_code }}</p>
+                    <p><strong>Country:</strong> {{ $recruitment->country }}</p>
+                    <p><strong>Document:</strong> {{ $recruitment->document }}</p>
+                    <p><strong>Status:</strong> {{ $recruitment->status }}</p>
                 </div>
             </div>
         </div>
