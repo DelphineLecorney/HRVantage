@@ -32,7 +32,7 @@
             <a class="nav-link" href="{{ route('vacation') }}">Vacation</a>
           </div>
 
-          <form class="d-flex">
+          <form class="d-flex ml-auto">
             <a class="btn btn-outline-success" href="{{ route('login') }}">Logout</a>
           </form>
         </div>

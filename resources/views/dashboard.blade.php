@@ -4,6 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
+            <br>
             <div class="card bg-light">
                 <div class="card-header mt-4 mb-4 text-center">
                     <h2 class="text-dark display-4">Welcome, {{ $user->name }} !</h2>
