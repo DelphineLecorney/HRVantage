@@ -12,6 +12,7 @@ HRVantage is a comprehensive Human Resources Management System (HRMS) designed t
 - [Usage](#usage)
 - [New Features](#new-features) <!-- New features added -->
 - [Data validation](#data-validation)
+- [Api IPinfo](#api-info)
 - [Pictures](#pictures)
 - [License](#license)
 
@@ -94,6 +95,25 @@ The `RecruitmentRequest` class contains the validation rules for recruitment dat
 If a recruitment form is submitted with data that does not respect these rules, Laravel will return an error response.
 
 This request class is used in our controller to validate data when creating or updating a recruitment.
+
+## IPinfo API
+
+The application uses the IPinfo API to obtain the user's city based on their IP address. This API provides geographic information based on the user's IP address, which improves the user experience by displaying relevant data based on the user's location.
+
+### How the API works
+
+The IPinfo API works by querying the IP address database to determine the approximate location of the user's IP address. It can provide details such as country, region, city and geographic coordinates.
+
+### Use in the application
+
+Within the application, the IPinfo API is used to obtain the user's city, allowing local weather information to be displayed. This creates a personalised experience for each user.
+
+### API access
+
+The application accesses the IPinfo API using a secure access token, which is stored in the environment variables for security reasons.
+
+To find out more about the IPinfo API and how it works, please consult the [official IPinfo API documentation](https://ipinfo.io/).
+
 
 
 ## Pictures
