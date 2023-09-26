@@ -23,6 +23,7 @@ class DashboardController extends Controller
         return response()->json(['Number of employees' => $numberOfEmployees]);
     }
 
+    // 'getNumberOfRecruitments' method: Returns the number of recruitments.
     public function countDistinctOpenPositions()
     {
         // 'distinctOpenPositionsCount' variable: Counts the number of distinct open positions.
