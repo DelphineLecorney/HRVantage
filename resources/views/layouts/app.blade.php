@@ -32,6 +32,16 @@
             <a class="nav-link" href="{{ route('vacation') }}">Vacation</a>
           </div>
 
+          <div class="weather-info">
+            @php
+            $weatherData = (new \App\Http\Controllers\WeatherController())->getWeather();
+            @endphp
+            <h3>Weather in {{ $weatherData['city'] }}</h3>
+            <p>Temperature: {{ $weatherData['temperature'] }}°C</p>
+            <img src="https://openweathermap.org/img/wn/{{ $weatherData['icon'] }}.png" alt="Weather Icon">
+          </div>
+
+
           <form class="d-flex ml-auto">
             <a class="btn btn-outline-success" href="{{ route('login') }}">Logout</a>
           </form>
