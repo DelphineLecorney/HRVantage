@@ -29,4 +29,14 @@ class DashboardController extends Controller
         $distinctOpenPositionsCount = Recruitment::distinct()->count('position_id');
         return response()->json(['Number of distinct open positions' => $distinctOpenPositionsCount]);
     }
+
+    // 'getRecruitmentInProgress' method: Returns the number of recruitments in progress.
+    public function getRecruitmentInProgress()
+    {
+        $recruitmentInProgress = Recruitment::where('status', 'pending')->count();
+
+        return response()->json([
+            'Number of recruitment in progress' => $recruitmentInProgress,
+        ]);
+    }
 }

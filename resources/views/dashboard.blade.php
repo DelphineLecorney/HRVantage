@@ -27,7 +27,13 @@
                             echo $data['Number of distinct open positions'];
                             @endphp
                         </li>
-                        <li>Recruitment in progress : </li>
+                        <li>Recruitment in progress :
+                            @php
+                            $response = app(\App\Http\Controllers\DashboardController::class)->getRecruitmentInProgress();
+                            $data = json_decode($response->content(), true);
+                            echo $data['Number of recruitment in progress'];
+                            @endphp
+                        </li>
                     </ul>
 
                     <h3 class="mt-4 mb-4 text-muted" style="--bs-text-opacity: .5;">Tasks to be carried out :</h3>
