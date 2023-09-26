@@ -32,21 +32,22 @@
             <a class="nav-link" href="{{ route('vacation') }}">Vacation</a>
           </div>
 
-          <div class="weather-info">
+          <div class="weather-info mr-3">
             @php
             $weatherData = (new \App\Http\Controllers\WeatherController())->getWeather();
             @endphp
-            <h3>Weather in {{ $weatherData['city'] }}</h3>
+            <h4>Weather in {{ $weatherData['city'] }}</h4>
             <p>Temperature: {{ $weatherData['temperature'] }}°C</p>
-            <img src="https://openweathermap.org/img/wn/{{ $weatherData['icon'] }}.png" alt="Weather Icon">
+            <p>Description: {{ $weatherData['description'] }}</p>
           </div>
 
+          <div>
+            <form class="d-flex ml-auto">
+              <a class="btn btn-outline-success" href="{{ route('login') }}">Logout</a>
+            </form>
+          </div>
 
-          <form class="d-flex ml-auto">
-            <a class="btn btn-outline-success" href="{{ route('login') }}">Logout</a>
-          </form>
         </div>
-      </div>
     </nav>
   </header>
   <main class="min-vh-100">

@@ -1,4 +1,4 @@
-# HRVantage - A Human Resources Management System
+	# HRVantage - A Human Resources Management System
 
 ![Work in Progress](https://github.com/DelphineLecorney/HRVantage/blob/master/public/Work.JPG)
 
@@ -10,6 +10,7 @@ HRVantage is a comprehensive Human Resources Management System (HRMS) designed t
 
 - [Installation](#installation)
 - [Usage](#usage)
+- [New Features](#new-features) <!-- New features added -->
 - [Pictures](#pictures)
 - [License](#license)
 
@@ -31,32 +32,45 @@ HRVantage simplifies various HR-related tasks and provides a user-friendly inter
 
 Add, view, edit, and archive employee profiles.
 Track essential employee information such as name, contact details, and address.
+
 ### Position Management:
 
 Create and manage different job positions within your organization.
 Assign positions to employees, ensuring proper role allocation.
+
 ### Social Benefit Management:
 
 Define and categorize social benefits, both monetary and non-monetary.
 Link social benefits to employees, allowing easy tracking of benefits provided.
+
 ### Data Organization:
 
 Keep all HR-related data organized in one centralized system.
 Access detailed employee records, including contact information and employment history.
+
 ### Efficient Reporting:
 
 Generate reports on employee data, positions, and social benefits.
 Gain insights into your workforce for better decision-making.
+
 ### User-Friendly Interface:
 
 HRVantage offers an intuitive and user-friendly interface, making it easy for HR personnel to navigate and manage data.
+
 ### Secure and Reliable:
 
 Ensure data security and reliability with built-in measures to protect sensitive HR information.
+
 ### Customization:
 
 Adapt HRVantage to your organization's specific needs through customization options.
+
+### New Features <!-- New functions -->
+
+- **Weather Information**: Get real-time weather information for your organization's location right within HRVantage. Know the temperature and weather conditions to better plan your HR activities.
+
 HRVantage is a valuable tool for HR professionals and organizations seeking to streamline HR operations, enhance data management, and improve overall efficiency in workforce management.
+
 ## Pictures
 
 Coming soon
