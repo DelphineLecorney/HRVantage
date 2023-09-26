@@ -80,14 +80,14 @@ To ensure that the recruitment data submitted by users is correct and compliant 
 The `RecruitmentRequest` class contains the validation rules for recruitment data. It specifies the mandatory fields and the specific validation rules for each field. Here are the rules currently defined in this class:
 
 - `position_id`: Mandatory.
-- name`: Mandatory.
+- `name`: Mandatory.
 - `firstname`: Mandatory.
-- email`: Mandatory.
+- `email`: Mandatory.
 - `phone`: Mandatory.
 - `address`: Mandatory.
-- city`: Mandatory.
+- `city`: Mandatory.
 - `zip_code`: Mandatory.
-- country`: Mandatory.
+- `country`: Mandatory.
 - `status`: Mandatory.
 
 If a recruitment form is submitted with data that does not respect these rules, Laravel will return an error response.
