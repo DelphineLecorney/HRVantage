@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\RecruitmentRequest;
 use App\Models\Recruitment;
 use App\Models\Position;
 
@@ -21,27 +22,23 @@ class RecruitmentController extends Controller
     }
 
     // 'store' method: Creates a new recruitment.
-    public function store()
+    public function store(RecruitmentRequest $request)
     {
-        Recruitment::create(request()->validate([
-            'position_id' => 'required',
-            'date' => 'required',
-            'status' => 'required',
-        ]));
+        Recruitment::create($request->validated());
+        return redirect()->route('recruitment.index');
+    }
 
-        return redirect()->route('recruitment');
+    // 'edit' method: Displays the edit form.
+    public function edit(Recruitment $recruitment)
+    {
+        return view('recruitment', compact('recruitment', 'positions'));
     }
 
     // 'update' method: Updates a recruitment.
-    public function update(Recruitment $recruitment)
+    public function update(RecruitmentRequest $request, Recruitment $recruitment)
     {
-        $recruitment->update(request()->validate([
-            'position_id' => 'required',
-            'date' => 'required',
-            'status' => 'required',
-        ]));
-
-        return redirect()->route('recruitment');
+        $recruitment->update($request->validated());
+        return redirect()->route('recruitment.index');
     }
 
     // 'destroy' method: Deletes a recruitment.
@@ -50,12 +47,5 @@ class RecruitmentController extends Controller
         $recruitment->delete();
 
         return redirect()->route('recruitment');
-    }
-
-    // 'edit' method: Displays the edit form.
-    public function edit(Recruitment $recruitment)
-    {
-        $positions = Position::all();
-        return view('recruitment', compact('recruitment', 'positions'));
     }
 }

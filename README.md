@@ -71,6 +71,30 @@ Adapt HRVantage to your organization's specific needs through customization opti
 
 HRVantage is a valuable tool for HR professionals and organizations seeking to streamline HR operations, enhance data management, and improve overall efficiency in workforce management.
 
+## Data validation
+
+To ensure that the recruitment data submitted by users is correct and compliant with our requirements, we use a Laravel request class called `RecruitmentRequest`.
+
+### `RecruitmentRequest`
+
+The `RecruitmentRequest` class contains the validation rules for recruitment data. It specifies the mandatory fields and the specific validation rules for each field. Here are the rules currently defined in this class:
+
+- `position_id`: Mandatory.
+- name`: Mandatory.
+- `firstname`: Mandatory.
+- email`: Mandatory.
+- `phone`: Mandatory.
+- `address`: Mandatory.
+- city`: Mandatory.
+- `zip_code`: Mandatory.
+- country`: Mandatory.
+- `status`: Mandatory.
+
+If a recruitment form is submitted with data that does not respect these rules, Laravel will return an error response.
+
+This request class is used in our controller to validate data when creating or updating a recruitment.
+
+
 ## Pictures
 
 Coming soon
