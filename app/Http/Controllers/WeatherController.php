@@ -48,7 +48,6 @@ class WeatherController extends Controller
             $resultWeatherData = [
                 'city' => $weatherData['name'],
                 'temperature' => $weatherData['main']['temp'],
-                'icon' => $weatherData['weather'][0]['icon'],
                 'description' => $weatherData['weather'][0]['description'],
             ];
         } else {
