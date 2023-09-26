@@ -34,6 +34,12 @@
                             echo $data['Number of recruitment in progress'];
                             @endphp
                         </li>
+                        <li>Recruitment approved :
+                            @php
+                            $response = app(\App\Http\Controllers\DashboardController::class)->getRecruitmentApproved();
+                            $data = json_decode($response->content(), true);
+                            echo $data['Number of recruitment approved'];
+                            @endphp
                     </ul>
 
                     <h3 class="mt-4 mb-4 text-muted" style="--bs-text-opacity: .5;">Tasks to be carried out :</h3>

@@ -39,4 +39,14 @@ class DashboardController extends Controller
             'Number of recruitment in progress' => $recruitmentInProgress,
         ]);
     }
+
+    // 'getRecruitmentApproved' method: Returns the number of recruitments approved.
+    public function getRecruitmentApproved()
+    {
+        $recruitmentApproved = Recruitment::where('status', 'approved')->count();
+
+        return response()->json([
+            'Number of recruitment approved' => $recruitmentApproved,
+        ]);
+    }
 }
