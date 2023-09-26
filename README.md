@@ -67,7 +67,7 @@ Ensure data security and reliability with built-in measures to protect sensitive
 
 Adapt HRVantage to your organization's specific needs through customization options.
 
-### New Features <!-- New functions -->
+### New Features
 
 - **Weather Information**: Get real-time weather information for your organization's location right within HRVantage. Know the temperature and weather conditions to better plan your HR activities.
 
