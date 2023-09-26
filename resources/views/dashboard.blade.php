@@ -20,7 +20,13 @@
                             echo $data['Number of employees'];
                             @endphp
                         </li>
-                        <li>Vacant positions :</li>
+                        <li>Vacant positions :
+                            @php
+                            $response = app(\App\Http\Controllers\DashboardController::class)->countDistinctOpenPositions();
+                            $data = json_decode($response->content(), true);
+                            echo $data['Number of distinct open positions'];
+                            @endphp
+                        </li>
                         <li>Recruitment in progress : </li>
                     </ul>
 

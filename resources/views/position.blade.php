@@ -4,37 +4,21 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <br>
-            <h1>Existing positions in our company</h1>
-            <br>
-            <ul class="list-group">
-                <li class="list-group-item">
-                    <h2>Job title 1</h2>
-                    <p>Job description 1 : Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </li>
-                <li class="list-group-item">
-                    <h2>Job title 2</h2>
-                    <p>Job description 2 : Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </li>
-                <li class="list-group-item">
-                    <h2>Job title 3</h2>
-                    <p>Job description 3 : Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </li>
-                <li class="list-group-item">
-                    <h2>Job title 4</h2>
-                    <p>Job description 4 : Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </li>
-                <li class="list-group-item">
-                    <h2>Job title 5</h2>
-                    <p>Job description 5 : Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </li>
-                <li class="list-group-item">
-                    <h2>Job title 6</h2>
-                    <p>Job description 6 : Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </li>
-
-            </ul>
-
+            <div class="card">
+                <div class="card-header">
+                    <h1 class="card-title">Existing Positions in the Company</h1>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group">
+                        @foreach ($positions as $position)
+                        <li class="list-group-item">
+                            <strong>{{ $position->name }}</strong>
+                            <p>{{ $position->description }}</p>
+                        </li>
+                        @endforeach
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 </div>

@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\PositionController;
 use App\Http\Controllers\RecruitmentController;
 use Illuminate\Support\Facades\Route;
 
@@ -64,6 +65,7 @@ Route::post('/auth/register', [AuthController::class, 'register'])->name('auth.r
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard')->middleware('auth');
 Route::get('/employee', [EmployeeController::class, 'index'])->name('employee')->middleware('auth');
+Route::get('/position', [PositionController::class, 'index'])->name('position')->middleware('auth');
 Route::get('/recruitment', [RecruitmentController::class, 'index'])->name('recruitment')->middleware('auth');
-Route::get('/recruitment/{id}', [RecruitmentController::class, 'showRecruitmentDetails'])->name('recruitment.showRecruitmentDetails')->middleware('auth');
+
 Route::post('/dashboard/get-number-of-employees', [DashboardController::class, 'getNumberOfEmployees'])->name('dashboard.getNumberOfEmployees')->middleware('auth');

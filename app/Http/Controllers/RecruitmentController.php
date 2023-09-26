@@ -6,23 +6,16 @@ use App\Models\Recruitment;
 
 class RecruitmentController extends Controller
 {
+
+    public function position()
+    {
+        return $this->belongsTo(Position::class);
+    }
+
     // 'index' method: Displays the recruitments.
     public function index()
     {
-        $recruitment = Recruitment::all();
-        return view('recruitment', ['recruitment' => $recruitment]);
-    }
-
-    public function showRecruitmentDetails($id)
-    {
-        $recruitment = Recruitment::find($id);
-
-        if ($recruitment) {
-            return view('recruitment.id', ['recruitment' => $recruitment]);
-        } else {
-            return response([
-                'message' => 'recruitment not found'
-            ], 404);
-        }
+        $recruitments = Recruitment::all();
+        return view('recruitment', compact('recruitments'));
     }
 }
