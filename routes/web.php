@@ -5,6 +5,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\PositionController;
 use App\Http\Controllers\RecruitmentController;
+use App\Http\Controllers\WeatherController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -73,6 +74,8 @@ Route::post('/auth/login', [AuthController::class, 'login'])->name('auth.login')
 Route::post('/auth/logout', [AuthController::class, 'logout'])->name('auth.logout');
 Route::post('/auth/register', [AuthController::class, 'register'])->name('auth.register');
 Route::post('/recruitment', [RecruitmentController::class, 'store'])->name('recruitment.store');
+Route::post('/dashboard/getWeather', [WeatherController::class, 'getWeather'])->name('dashboard.getWeather')->middleware('auth');
 Route::post('/dashboard/get-number-of-employees', [DashboardController::class, 'getNumberOfEmployees'])->name('dashboard.getNumberOfEmployees')->middleware('auth');
 Route::post('/dashboard/get-Recruitment-In-Progress', [DashboardController::class, 'getRecruitmentInProgress'])->name('dashboard.getRecruitmentInProgress')->middleware('auth');
 Route::post('/dashboard/get-Recruitment-Approved', [DashboardController::class, 'getRecruitmentApproved'])->name('dashboard.getRecruitmentApproved')->middleware('auth');
+

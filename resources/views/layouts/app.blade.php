@@ -33,6 +33,15 @@
           </div>
 
           <div class="weather-info mr-3">
+            <form method="post" action="{{ route('dashboard.getWeather') }}">
+              @csrf
+
+              <div class="form-group">
+                <label for="city">City</label>
+                <input type="text" class="form-control" id="city" name="city" value="{{ old('city', $user->city) }}"><button type="submit" class="btn btn-primary">Get Weather</button>
+              </div>
+            </form>
+
             @php
             $weatherData = (new \App\Http\Controllers\WeatherController())->getWeather();
             @endphp
@@ -40,6 +49,7 @@
             <p>Temperature: {{ $weatherData['temperature'] }}°C</p>
             <p>Description: {{ $weatherData['description'] }}</p>
           </div>
+
 
           <div>
             <form class="d-flex ml-auto">
