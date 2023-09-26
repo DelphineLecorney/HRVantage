@@ -1,4 +1,4 @@
-	# HRVantage - A Human Resources Management System
+# HRVantage - A Human Resources Management System
 
 ![Work in Progress](https://github.com/DelphineLecorney/HRVantage/blob/master/public/Work.JPG)
 
