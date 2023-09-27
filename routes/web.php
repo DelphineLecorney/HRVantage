@@ -59,10 +59,6 @@ Route::get('/vacation', function () {
     return view('vacation');
 })->name('vacation');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
-
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard')->middleware('auth');
 Route::get('/employee', [EmployeeController::class, 'index'])->name('employee')->middleware('auth');
 Route::get('/position', [PositionController::class, 'index'])->name('position')->middleware('auth');
