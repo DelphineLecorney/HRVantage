@@ -78,4 +78,3 @@ Route::post('/dashboard/getWeather', [WeatherController::class, 'getWeather'])->
 Route::post('/dashboard/get-number-of-employees', [DashboardController::class, 'getNumberOfEmployees'])->name('dashboard.getNumberOfEmployees')->middleware('auth');
 Route::post('/dashboard/get-Recruitment-In-Progress', [DashboardController::class, 'getRecruitmentInProgress'])->name('dashboard.getRecruitmentInProgress')->middleware('auth');
 Route::post('/dashboard/get-Recruitment-Approved', [DashboardController::class, 'getRecruitmentApproved'])->name('dashboard.getRecruitmentApproved')->middleware('auth');
-
