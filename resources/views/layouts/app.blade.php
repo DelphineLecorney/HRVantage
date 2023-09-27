@@ -29,7 +29,7 @@
             <a class="nav-link" href="{{ route('socialbenefit') }}">Social Benefit</a>
             <a class="nav-link" href="{{ route('termination') }}">Termination</a>
             <a class="nav-link" href="{{ route('training') }}">Training</a>
-            <a class="nav-link" href="{{ route('vacation') }}">Vacation</a>
+            <a class="nav-link" href="{{ route('vacation') }}">Vacation</a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
           </div>
 
           <div class="weather-info mr-3">
@@ -41,7 +41,7 @@
             <p>Temperature: {{ $weatherData['temperature'] }}°C</p>
             <p>Description: {{ $weatherData['description'] }}</p>
           </div>
-
+          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 
           <div>
             <form class="d-flex ml-auto">

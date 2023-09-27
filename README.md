@@ -12,6 +12,7 @@ HRVantage is a comprehensive Human Resources Management System (HRMS) designed t
 - [Usage](#usage)
 - [New Features](#new-features)
 - [Data validation](#data-validation)
+- [OpenWeatherMap API](#openWeatherMap-api)
 - [IPinfo API](#IPinfo-API)
 - [License](#license)
 
@@ -94,6 +95,26 @@ The `RecruitmentRequest` class contains the validation rules for recruitment dat
 If a recruitment form is submitted with data that does not respect these rules, Laravel will return an error response.
 
 This request class is used in our controller to validate data when creating or updating a recruitment.
+
+## OpenWeatherMap API
+
+HRVantage uses the OpenWeatherMap API to provide real-time weather information. This feature allows users to know the current temperature and weather conditions based on their location.
+
+### How It Works
+
+The HRVantage application utilizes the IPinfo API to automatically determine the user's location based on their IP address. It then uses this location data to query the OpenWeatherMap API for current weather information. The retrieved data is then displayed in the user interface.
+
+### Configuration
+
+To enable this feature, users only need to use the HRVantage application. The application will automatically determine their location based on their IP address and display the appropriate weather data.
+
+#### API Key
+
+Please note that no API key is required from users for this feature. The HRVantage application manages the API calls and data retrieval on their behalf.
+
+By adding this section, you help users understand how your HRVantage application uses the IPinfo API to determine their location and then fetches weather data from the OpenWeatherMap API to provide them with real-time weather information.
+
+
 
 ## IPinfo API
 
