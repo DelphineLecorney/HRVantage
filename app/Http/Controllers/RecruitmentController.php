@@ -43,14 +43,17 @@ class RecruitmentController extends Controller
         return view('recruitment.editRecruitment', compact('recruitment', 'positions'));
     }
 
-    // 'update' method: Updates a recruitment.
-    public function update(RecruitmentRequest $request, Recruitment $recruitment)
+    // 'update' method: Updates the recruitment.
+    public function update(RecruitmentRequest $request, $id)
     {
+        $recruitment = Recruitment::find($id);
+
         $recruitment->update($request->validated());
-        return redirect()->route('recruitment.index');
+
+        return redirect()->route('recruitment')->with('success', 'The application for employment has been updated successfully.');
     }
 
-    // 'destroy' method: Deletes a recruitment.
+    // 'destroy' method: Deletes the recruitment.
     public function destroy(Recruitment $recruitment)
     {
         $recruitment->delete();

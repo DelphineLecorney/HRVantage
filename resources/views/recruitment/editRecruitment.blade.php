@@ -1,10 +1,11 @@
-@extends('layouts.header')
+@extends('layouts.app')
 
 @section('content')
 <div class="container">
     <h1>Edit Request for Recruitment</h1>
-    <form action="{{ route('recruitment.edit', ['recruitment' => $recruitment]) }}" method="POST">
+    <form action="{{ route('recruitment.update', ['recruitment' => $recruitment]) }}" method="POST">
         @csrf
+        @method('PUT')
         <div class="form-group">
             <label for="position_id">Position</label>
             <select name="position_id" id="position_id" class="form-control">
