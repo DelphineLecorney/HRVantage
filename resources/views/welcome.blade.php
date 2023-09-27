@@ -3,7 +3,7 @@
 @section('content')
 <main class="container">
 
-    <section id="description">
+    <section id="sign-in-section" class="description">
         <h2 class="mt-5">Description</h2>
         <p>HRVantage is a comprehensive human resources management system designed to simplify HR processes, manage employee information and facilitate HR operations.</p>
         <p>You can register to access more features.</p>
@@ -20,12 +20,19 @@
         </ul>
     </section>
 
-    <section id="description">
+    <section id="register-section" class="description">
         <h2 class="mt-5">Sign in or register</h2>
         <br>
         <a class="btn btn-outline-success" href="{{ route('register') }}">Registrer</a>
         <a class="btn btn-outline-primary" href="{{ route('login') }}">Sign in</a>
     </section>
+
+    @if (session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+    @endif
+
     <br>
 </main>
 @endsection

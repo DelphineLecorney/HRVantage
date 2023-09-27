@@ -26,7 +26,6 @@ class RecruitmentFactory extends Factory
             'city' => $this->faker->city,
             'zip_code' => $this->faker->postcode,
             'country' => $this->faker->country,
-            'document' => $this->faker->randomElement(['cv.pdf', 'cv.doc', 'cv.docx']),
             'status' => $this->faker->randomElement(['approved', 'rejected', 'pending']),
         ];
     }

@@ -4,7 +4,8 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class() extends Migration {
+return new class() extends Migration
+{
     /**
      * Run the migrations.
      */
@@ -21,7 +22,6 @@ return new class() extends Migration {
             $table->string('city', 100);
             $table->string('zip_code', 100);
             $table->string('country', 100);
-            $table->string('document', 100);
             $table->string('status', 100);
             $table->timestamps();
         });

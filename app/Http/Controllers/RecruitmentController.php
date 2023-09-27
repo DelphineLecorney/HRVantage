@@ -32,7 +32,8 @@ class RecruitmentController extends Controller
     public function store(RecruitmentRequest $request)
     {
         Recruitment::create($request->validated());
-        return redirect()->route('recruitment.index');
+
+        return redirect()->route('welcome')->with('success', 'The application for employment has been registered successfully.');
     }
 
     // 'edit' method: Displays the edit form.
