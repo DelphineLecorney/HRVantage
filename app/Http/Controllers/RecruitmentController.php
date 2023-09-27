@@ -39,7 +39,8 @@ class RecruitmentController extends Controller
     // 'edit' method: Displays the edit form.
     public function edit(Recruitment $recruitment)
     {
-        return view('recruitment', compact('recruitment', 'positions'));
+        $positions = Position::all();
+        return view('recruitment.editRecruitment', compact('recruitment', 'positions'));
     }
 
     // 'update' method: Updates a recruitment.

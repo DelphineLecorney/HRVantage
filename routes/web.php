@@ -64,6 +64,8 @@ Route::get('/employee', [EmployeeController::class, 'index'])->name('employee')-
 Route::get('/position', [PositionController::class, 'index'])->name('position')->middleware('auth');
 Route::get('/recruitment', [RecruitmentController::class, 'index'])->name('recruitment')->middleware('auth');
 Route::get('/recruitment/create', [RecruitmentController::class, 'create'])->name('recruitment.create');
+Route::get('/recruitment/edit/{recruitment}', [RecruitmentController::class, 'edit'])->name('recruitment.edit');
+
 
 Route::post('/auth/login', [AuthController::class, 'login'])->name('auth.login');
 Route::post('/auth/logout', [AuthController::class, 'logout'])->name('auth.logout');

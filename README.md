@@ -15,7 +15,6 @@ HRVantage is a comprehensive Human Resources Management System (HRMS) designed t
 - [New Features](#new-features)
 - [Data validation](#data-validation)
 - [IPinfo API](#IPinfo-API)
-- [Pictures](#pictures)
 - [License](#license)
 
 ## Installation
