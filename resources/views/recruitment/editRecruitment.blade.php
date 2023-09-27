@@ -49,14 +49,21 @@
         <div class="form-group">
             <label for="status">Status</label>
             <select name="status" id="status" value="{{ $recruitment->status }}" class="form-control">
-                <option value="Pending" selected>Pending</option>
-                <option value="Approved" disabled>Approved</option>
-                <option value="Rejected" disabled>Rejected</option>
+                <option value="Pending">Pending</option>
+                <option value="Approved">Approved</option>
+                <option value="Rejected">Rejected</option>
             </select>
         </div>
         <div class="form-group">
             <button type="submit" id="submit" class="btn btn-primary">Request for edit Recruitment</button>
         </div>
     </form>
+
+    <form action="{{ route('recruitment.destroy', ['recruitment' => $recruitment]) }}" method="POST">
+        @csrf
+        @method('DELETE')
+        <button type="submit" class="btn btn-danger">Delete</button>
+    </form>
+
 </div>
 @endsection

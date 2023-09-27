@@ -1,6 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
+
+@if (session('success'))
+<div class="alert alert-success">
+    {{ session('success') }}
+</div>
+@endif
+
 <br>
 <div class="container">
     <div class="row justify-content-center">
@@ -27,4 +34,5 @@
         </div>
     </div>
 </div>
+
 @endsection

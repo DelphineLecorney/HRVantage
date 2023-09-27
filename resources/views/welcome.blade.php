@@ -1,6 +1,13 @@
 @extends('layouts.header')
 
 @section('content')
+
+@if (session('success'))
+<div class="alert alert-success">
+    {{ session('success') }}
+</div>
+@endif
+
 <main class="container">
 
     <section id="sign-in-section" class="description">
@@ -98,12 +105,6 @@
         <a class="btn btn-outline-success" href="{{ route('register') }}">Registrer</a>
         <a class="btn btn-outline-primary" href="{{ route('login') }}">Sign in</a>
     </section>
-
-    @if (session('success'))
-    <div class="alert alert-success">
-        {{ session('success') }}
-    </div>
-    @endif
 
     <br>
 </main>

@@ -66,6 +66,7 @@ Route::get('/recruitment', [RecruitmentController::class, 'index'])->name('recru
 Route::get('/recruitment/create', [RecruitmentController::class, 'create'])->name('recruitment.create');
 Route::get('/recruitment/edit/{recruitment}', [RecruitmentController::class, 'edit'])->name('recruitment.edit')->middleware('auth');
 Route::put('/recruitment/update/{recruitment}', [RecruitmentController::class, 'update'])->name('recruitment.update')->middleware('auth');
+Route::delete('/recruitment/destroy/{recruitment}', [RecruitmentController::class, 'destroy'])->name('recruitment.destroy')->middleware('auth');
 
 Route::post('/auth/login', [AuthController::class, 'login'])->name('auth.login');
 Route::post('/auth/logout', [AuthController::class, 'logout'])->name('auth.logout');

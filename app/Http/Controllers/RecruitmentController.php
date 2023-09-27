@@ -54,10 +54,11 @@ class RecruitmentController extends Controller
     }
 
     // 'destroy' method: Deletes the recruitment.
-    public function destroy(Recruitment $recruitment)
+    public function destroy($id)
     {
+        $recruitment = Recruitment::find($id);
         $recruitment->delete();
 
-        return redirect()->route('recruitment');
+        return redirect()->route('recruitment')->with('success', 'The application for employment has been deleted successfully.');
     }
 }

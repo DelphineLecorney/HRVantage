@@ -1,7 +1,5 @@
 # HRVantage - A Human Resources Management System
 
-![Work in Progress](https://github.com/DelphineLecorney/HRVantage/blob/master/public/images/Work.JPG)
-
 ## Description
 
 HRVantage is a comprehensive Human Resources Management System (HRMS) designed to streamline HR processes, manage employee data, and facilitate efficient HR operations. This system allows organizations to handle employee information, positions, social benefits, and more. With HRVantage, you can effectively manage your HR tasks, ensuring a smooth and organized workforce management experience.
@@ -119,3 +117,5 @@ To find out more about the IPinfo API and how it works, please consult the [offi
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+![Work in Progress](https://github.com/DelphineLecorney/HRVantage/blob/master/public/images/Work.JPG)
