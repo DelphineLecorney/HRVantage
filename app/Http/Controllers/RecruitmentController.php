@@ -18,14 +18,14 @@ class RecruitmentController extends Controller
     public function index()
     {
         $recruitments = Recruitment::all();
-        return view('recruitment', compact('recruitments'));
+        return view('recruitment.recruitment', compact('recruitments'));
     }
 
     // 'create' method: Displays the create form.
     public function create()
     {
         $positions = Position::all();
-        return view('createRecruitment', compact('positions'));
+        return view('recruitment.createRecruitment', compact('positions'));
     }
 
     // 'store' method: Creates a new recruitment.
