@@ -25,9 +25,11 @@
                             <p>Name: {{ $recruitment->name }} {{ $recruitment->firstname }} <br>
                                 Email: {{ $recruitment->email }}</p>
 
-                            <p>Status: {{ $recruitment->status }}</p>
+                            <p>Status: {{ $recruitment->status }} &nbsp; &nbsp; <a href="{{ route('recruitment.edit', ['recruitment' => $recruitment]) }}" class="btn btn-primary">Edit</a></p>
+
                         </li>
                         @endforeach
+
                     </ul>
                 </div>
             </div>
