@@ -6,6 +6,14 @@
     <form action="{{ route('employee.store') }}" method="POST">
         @csrf
         <div class="form-group">
+            <label for="position_id">Position</label>
+            <select name="position_id" id="position_id" class="form-control">
+                @foreach ($positions as $position)
+                <option value="{{ $position->id }}">{{ $position->name }}</option>
+                @endforeach
+            </select>
+        </div>
+        <div class="form-group">
             <label for="name">Name</label>
             <input type="text" name="name" autocomplete="name" class="form-control" required>
         </div>
@@ -32,5 +40,16 @@
         <div class="form-group">
             <label for="country">Country</label>
             <input type="text" name="country" autocomplete="name" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="position_id">Position</label>
+            <select name="position_id" id="position_id" class="form-control">
+                @foreach ($positions as $position)
+                <option value="{{ $position->id }}">{{ $position->name }}</option>
+                @endforeach
+            </select>
+        </div>
+        <div class="form-group">
+            <button type="submit" id="submit" class="btn btn-primary">Create Employee</button>
         </div>
         @endsection

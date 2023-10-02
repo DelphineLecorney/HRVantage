@@ -4,9 +4,16 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\EmployeeRequest;
 use App\Models\Employee;
+use App\Models\Position;
 
 class EmployeeController extends Controller
 {
+    // 'index' method: Displays the employees.
+    public function position()
+    {
+        return $this->belongsTo(Position::class);
+    }
+
     // 'index' method: Displays the employees.
     public function index()
     {
@@ -17,8 +24,8 @@ class EmployeeController extends Controller
     // 'create' method: Displays the create form.
     public function create()
     {
-        $employees = Employee::all();
-        return view('employee.createEmployee', compact('employees'));
+        $positions = Position::all();
+        return view('employee.createEmployee', compact('positions'));
     }
 
     // 'store' method: Creates a new employee.
@@ -30,9 +37,9 @@ class EmployeeController extends Controller
     }
 
     // 'edit' method: Displays the edit form.
-    public function edit(Employee $employee)
+    public function edit($id)
     {
-        $employees = Employee::all();
+        $employee = Employee::find($id);
         return view('employee.editEmployee', compact('employee'));
     }
 

@@ -60,22 +60,30 @@ Route::get('/vacation', function () {
 })->name('vacation');
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard')->middleware('auth');
-Route::get('/employee', [EmployeeController::class, 'index'])->name('employee')->middleware('auth');
-Route::get('/position', [PositionController::class, 'index'])->name('position')->middleware('auth');
-Route::get('/recruitment', [RecruitmentController::class, 'index'])->name('recruitment')->middleware('auth');
-Route::get('/recruitment/create', [RecruitmentController::class, 'create'])->name('recruitment.create');
-Route::get('/recruitment/edit/{recruitment}', [RecruitmentController::class, 'edit'])->name('recruitment.edit')->middleware('auth');
-Route::put('/recruitment/update/{recruitment}', [RecruitmentController::class, 'update'])->name('recruitment.update')->middleware('auth');
-Route::delete('/recruitment/destroy/{recruitment}', [RecruitmentController::class, 'destroy'])->name('recruitment.destroy')->middleware('auth');
-
-
-Route::post('/auth/login', [AuthController::class, 'login'])->name('auth.login');
-Route::post('/auth/logout', [AuthController::class, 'logout'])->name('auth.logout');
-Route::post('/auth/register', [AuthController::class, 'register'])->name('auth.register');
-Route::post('/recruitment', [RecruitmentController::class, 'store'])->name('recruitment.store');
-
-
 Route::post('/dashboard/getWeather', [WeatherController::class, 'getWeather'])->name('dashboard.getWeather')->middleware('auth');
 Route::post('/dashboard/get-number-of-employees', [DashboardController::class, 'getNumberOfEmployees'])->name('dashboard.getNumberOfEmployees')->middleware('auth');
 Route::post('/dashboard/get-Recruitment-In-Progress', [DashboardController::class, 'getRecruitmentInProgress'])->name('dashboard.getRecruitmentInProgress')->middleware('auth');
 Route::post('/dashboard/get-Recruitment-Approved', [DashboardController::class, 'getRecruitmentApproved'])->name('dashboard.getRecruitmentApproved')->middleware('auth');
+
+Route::get('/recruitment', [RecruitmentController::class, 'index'])->name('recruitment')->middleware('auth');
+Route::get('/recruitment/create', [RecruitmentController::class, 'create'])->name('recruitment.create');
+Route::get('/recruitment/edit/{recruitment}', [RecruitmentController::class, 'edit'])->name('recruitment.edit')->middleware('auth');
+
+Route::get('/employee', [EmployeeController::class, 'index'])->name('employee')->middleware('auth');
+Route::get('/employee/create', [EmployeeController::class, 'create'])->name('employee.create')->middleware('auth');
+Route::get('/employee/edit/{employee}', [EmployeeController::class, 'edit'])->name('employee.edit')->middleware('auth');
+
+Route::get('/position', [PositionController::class, 'index'])->name('position')->middleware('auth');
+
+Route::put('/recruitment/update/{recruitment}', [RecruitmentController::class, 'update'])->name('recruitment.update')->middleware('auth');
+Route::put('/employee/update/{employee}', [EmployeeController::class, 'update'])->name('employee.update')->middleware('auth');
+
+Route::delete('/recruitment/destroy/{recruitment}', [RecruitmentController::class, 'destroy'])->name('recruitment.destroy')->middleware('auth');
+Route::delete('/employee/destroy/{employee}', [EmployeeController::class, 'destroy'])->name('employee.destroy')->middleware('auth');
+
+Route::post('/auth/login', [AuthController::class, 'login'])->name('auth.login');
+Route::post('/auth/logout', [AuthController::class, 'logout'])->name('auth.logout');
+Route::post('/auth/register', [AuthController::class, 'register'])->name('auth.register');
+
+Route::post('/recruitment', [RecruitmentController::class, 'store'])->name('recruitment.store');
+Route::post('/employee', [EmployeeController::class, 'store'])->name('employee.store');

@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <h1>Edit Request for Recruitment</h1>
-    <form action="{{ route('recruitment.update', ['recruitment' => $recruitment]) }}" method="POST">
+    <form action="{{ route('recruitment.update', ['recruitment' => $recruitment]) }}," method="POST">
         @csrf
         @method('PUT')
         <div class="form-group">
