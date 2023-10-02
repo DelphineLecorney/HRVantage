@@ -68,10 +68,12 @@ Route::get('/recruitment/edit/{recruitment}', [RecruitmentController::class, 'ed
 Route::put('/recruitment/update/{recruitment}', [RecruitmentController::class, 'update'])->name('recruitment.update')->middleware('auth');
 Route::delete('/recruitment/destroy/{recruitment}', [RecruitmentController::class, 'destroy'])->name('recruitment.destroy')->middleware('auth');
 
+
 Route::post('/auth/login', [AuthController::class, 'login'])->name('auth.login');
 Route::post('/auth/logout', [AuthController::class, 'logout'])->name('auth.logout');
 Route::post('/auth/register', [AuthController::class, 'register'])->name('auth.register');
 Route::post('/recruitment', [RecruitmentController::class, 'store'])->name('recruitment.store');
+
 
 Route::post('/dashboard/getWeather', [WeatherController::class, 'getWeather'])->name('dashboard.getWeather')->middleware('auth');
 Route::post('/dashboard/get-number-of-employees', [DashboardController::class, 'getNumberOfEmployees'])->name('dashboard.getNumberOfEmployees')->middleware('auth');

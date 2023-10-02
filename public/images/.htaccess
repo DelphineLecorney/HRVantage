@@ -11,15 +11,13 @@
 
     # Redirect Trailing Slashes If Not A Folder...
     RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteCond %{REQUEST_URI} (.+)/$ 
-    RewriteCond %{REQUEST_URI} !^public
+    RewriteCond %{REQUEST_URI} (.+)/$
     RewriteRule ^ %1 [L,R=301]
 
     # Send Requests To Front Controller...
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
-    RewriteRule ^(.*)$ public/$1 [L]
-    DirectoryIndex /public/index.php
+    DirectoryIndex index.php
 
 </IfModule>

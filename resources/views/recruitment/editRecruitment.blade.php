@@ -74,8 +74,5 @@
             </form>
         </div>
     </form>
-
-
-
 </div>
 @endsection
