@@ -7,7 +7,8 @@
             <br>
             <div class="card">
                 <div class="card-header">
-                    <h1 class="card-title">Employee List</h1>
+                    <h1 class="card-title">Employee List &nbsp; &nbsp; &nbsp;<a href="{{ route('employee.create') }}" class="btn btn-primary float-right">Add Employee</a></h1>
+
                 </div>
                 <div class="card-body">
                     <table class="table table-striped">
@@ -16,7 +17,7 @@
                                 <th scope="col">Name</th>
                                 <th scope="col">Email</th>
                                 <th scope="col">Phone</th>
-                                <th scope="col">Adress</th>
+                                <th scope="col">Address</th>
                                 <th scope="col">City</th>
                                 <th scope="col">Zip Code</th>
                                 <th scope="col">Country</th>
@@ -32,6 +33,11 @@
                                 <td>{{ $employee->city }}</td>
                                 <td>{{ $employee->zip_code }}</td>
                                 <td>{{ $employee->country }}</td>
+                                <td>
+                                    <form action="{{ route('employee.destroy', ['employee' => $employee]) }}" method="POST">
+                                        <a href="{{ route('employee.edit', ['employee' => $employee]) }}" class="btn btn-warning">Edit</a>
+                                    </form>
+
                             </tr>
                             @endforeach
                         </tbody>
