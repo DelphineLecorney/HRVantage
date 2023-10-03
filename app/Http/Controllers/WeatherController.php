@@ -22,7 +22,6 @@ class WeatherController extends Controller
 
         $response = Http::get("https://ipinfo.io/$userIpAddress?token=$accessToken");
 
-
         if ($response->successful()) {
             $userLocationData = $response->json();
 
