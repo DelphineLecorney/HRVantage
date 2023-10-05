@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Position;
+use App\Http\Requests\PositionRequest;
 
 class PositionController extends Controller
 {
@@ -18,5 +19,13 @@ class PositionController extends Controller
     public function create()
     {
         return view('position.createPosition', compact('positions'));
+    }
+
+    // 'store' method: Creates a new position.
+    public function store(PositionRequest $request)
+    {
+        Position::create($request->validated());
+
+        return redirect()->route('position')->with('success', 'The position has been registered successfully.');
     }
 }
