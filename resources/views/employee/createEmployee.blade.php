@@ -61,4 +61,6 @@
         <div class="form-group">
             <button type="submit" id="submit" class="btn btn-primary">Create Employee</button>
         </div>
-        @endsection
+    </form>
+</div>
+@endsection

@@ -79,9 +79,11 @@ Route::get('/position/edit/{position}', [PositionController::class, 'edit'])->na
 
 Route::put('/recruitment/update/{recruitment}', [RecruitmentController::class, 'update'])->name('recruitment.update')->middleware('auth');
 Route::put('/employee/update/{employee}', [EmployeeController::class, 'update'])->name('employee.update')->middleware('auth');
+Route::put('/position/update/{position}', [PositionController::class, 'update'])->name('position.update')->middleware('auth');
 
 Route::delete('/recruitment/destroy/{recruitment}', [RecruitmentController::class, 'destroy'])->name('recruitment.destroy')->middleware('auth');
 Route::delete('/employee/destroy/{employee}', [EmployeeController::class, 'destroy'])->name('employee.destroy')->middleware('auth');
+Route::delete('/position/destroy/{position}', [PositionController::class, 'destroy'])->name('position.destroy')->middleware('auth');
 
 Route::post('/auth/login', [AuthController::class, 'login'])->name('auth.login');
 Route::post('/auth/logout', [AuthController::class, 'logout'])->name('auth.logout');
@@ -89,3 +91,4 @@ Route::post('/auth/register', [AuthController::class, 'register'])->name('auth.r
 
 Route::post('/recruitment', [RecruitmentController::class, 'store'])->name('recruitment.store');
 Route::post('/employee', [EmployeeController::class, 'store'])->name('employee.store');
+Route::post('/position', [PositionController::class, 'store'])->name('position.store');
