@@ -26,6 +26,7 @@
         @csrf
         @method('DELETE')
         <div class="form-group">
+            <!-- Fix with employees_position_id -->
             <button type="submit" id="submit" class="btn btn-danger">Delete Position</button>
         </div>
     </form>

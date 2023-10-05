@@ -14,8 +14,10 @@
             <br>
             <div class="card">
                 <div class="card-header">
-                    <h1 class="card-title">Employee List &nbsp; &nbsp; &nbsp;<a href="{{ route('employee.create') }}" class="btn btn-primary float-right">Add Employee</a></h1>
-
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h1 class="card-title">Employee List</h1>
+                        <a href="{{ route('employee.create') }}" class="btn btn-primary">Add Employee</a>
+                    </div>
                 </div>
                 <div class="card-body">
                     <table class="table table-striped">
@@ -43,10 +45,8 @@
                                 <td>{{ $employee->zip_code }}</td>
                                 <td>{{ $employee->country }}</td>
                                 <td>
-                                    <form action="{{ route('employee.destroy', ['employee' => $employee]) }}" method="POST">
-                                        <a href="{{ route('employee.edit', ['employee' => $employee]) }}" class="btn btn-warning">Edit</a>
-                                    </form>
-
+                                    <a href="{{ route('employee.edit', ['employee' => $employee]) }}" class="btn btn-primary">Edit</a>
+                                </td>
                             </tr>
                             @endforeach
                         </tbody>

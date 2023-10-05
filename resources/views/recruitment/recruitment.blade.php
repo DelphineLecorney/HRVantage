@@ -8,7 +8,6 @@
 </div>
 @endif
 
-<br>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -20,16 +19,16 @@
                     <ul class="list-group">
                         @foreach ($recruitments as $recruitment)
                         <li class="list-group-item">
-                            <strong>Position: {{ $recruitment->position->name }}</strong>
-                            <br><br>
-                            <p>Name: {{ $recruitment->name }} {{ $recruitment->firstname }} <br>
-                                Email: {{ $recruitment->email }}</p>
-
-                            <p>Status: {{ $recruitment->status }} &nbsp; &nbsp; <a href="{{ route('recruitment.edit', ['recruitment' => $recruitment]) }}" class="btn btn-primary">Edit</a></p>
-
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <strong>Position: {{ $recruitment->position->name }}</strong>
+                                    <p>Name: {{ $recruitment->name }} {{ $recruitment->firstname }} <br>Email: {{ $recruitment->email }}</p>
+                                    <p>Status: {{ $recruitment->status }}</p>
+                                </div>
+                                <a href="{{ route('recruitment.edit', ['recruitment' => $recruitment]) }}" class="btn btn-primary">Edit</a>
+                            </div>
                         </li>
                         @endforeach
-
                     </ul>
                 </div>
             </div>

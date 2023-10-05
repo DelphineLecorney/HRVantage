@@ -56,6 +56,7 @@
         @csrf
         @method('DELETE')
         <div class="form-group">
+            <!-- Fix with termination later -->
             <button type="submit" id="submit" class="btn btn-danger">Delete Employee</button>
         </div>
     </form>
