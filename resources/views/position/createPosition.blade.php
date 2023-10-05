@@ -6,13 +6,13 @@
     <form action="{{ route('position.store') }}" method="POST">
         @csrf
         <div class="form-group">
-            <label for="name">Position Name</label>
+            <label for="name">Name</label>
             <input type="text" name="name" id="name" autocomplete="name" class="form-control" required>
         </div>
         <br>
         <div class="form-group">
-            <label for="description">Position Description</label>
-            <input type="text" name="description" id="description" autocomplete="name" class="form-control" required>
+            <label for="description">Description</label>
+            <input type="text" name="description" id="description" autocomplete="description" class="form-control" required>
         </div>
         <br>
         <div class="form-group">

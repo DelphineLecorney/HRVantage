@@ -8,6 +8,7 @@ use App\Models\Position;
 
 class PositionController extends Controller
 {
+
     // 'index' method: Displays the positions.
     public function index()
     {
@@ -31,10 +32,10 @@ class PositionController extends Controller
     }
 
     // 'edit' method: Displays the form to edit a position.
-    public function edit($id)
+    public function edit(Position $position)
     {
-        $position = Position::find($id);
-        return view('position.editPosition', compact('position'));
+        $positions = Position::all();
+        return view('position.editPosition', compact('position', 'positions'));
     }
 
     // 'update' method: Updates the position.

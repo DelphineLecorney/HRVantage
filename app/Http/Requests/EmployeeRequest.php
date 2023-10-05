@@ -22,7 +22,6 @@ class EmployeeRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'position_id' => 'required',
             'name' => 'required',
             'firstname' => 'required',
             'email' => 'required',
@@ -31,7 +30,6 @@ class EmployeeRequest extends FormRequest
             'city' => 'required',
             'zip_code' => 'required',
             'country' => 'required',
-            'status' => 'required',
         ];
     }
 }

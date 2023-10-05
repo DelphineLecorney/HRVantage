@@ -9,6 +9,7 @@ class Position extends Model
 {
     use HasFactory;
 
+    // 'fillable' property: Mass assignable attributes.
     protected $fillable = [
         'name',
         'description',

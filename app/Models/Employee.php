@@ -9,7 +9,6 @@ class Employee extends Model
 {
     use HasFactory;
 
-
     public function position()
     {
         return $this->belongsTo(Position::class);
@@ -19,6 +18,7 @@ class Employee extends Model
     {
         return $this->belongsTo(Socialbenefit::class);
     }
+
     // protected $table = 'employees';
     protected $fillable = [
         'position_id',

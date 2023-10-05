@@ -23,7 +23,6 @@ class PositionRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'position' => 'required',
             'name' => 'required',
             'description' => 'required',
         ];

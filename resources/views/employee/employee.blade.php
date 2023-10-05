@@ -1,6 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
+
+@if (session('success'))
+<div class="alert alert-success">
+    {{ session('success') }}
+</div>
+@endif
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-14">
@@ -15,6 +22,7 @@
                         <thead>
                             <tr>
                                 <th scope="col">Name</th>
+                                <th scope="col">Firstname</th>
                                 <th scope="col">Email</th>
                                 <th scope="col">Phone</th>
                                 <th scope="col">Address</th>
@@ -27,6 +35,7 @@
                             @foreach($employees as $employee)
                             <tr>
                                 <td>{{ $employee->name }}</td>
+                                <td>{{ $employee->firstname }}</td>
                                 <td>{{ $employee->email }}</td>
                                 <td>{{ $employee->phone }}</td>
                                 <td>{{ $employee->address }}</td>

@@ -37,10 +37,10 @@ class EmployeeController extends Controller
     }
 
     // 'edit' method: Displays the edit form.
-    public function edit($id)
+    public function edit(Employee $employee)
     {
-        $employee = Employee::find($id);
-        return view('employee.editEmployee', compact('employee'));
+        $employees = Employee::all();
+        return view('employee.editEmployee', compact('employee', 'employees'));
     }
 
     // 'update' method: Updates the employee.
