@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Position;
 use App\Http\Requests\PositionRequest;
+use App\Models\Position;
+
 
 class PositionController extends Controller
 {
@@ -18,7 +19,7 @@ class PositionController extends Controller
     // 'create' method: Displays the form to create a new position.
     public function create()
     {
-        return view('position.createPosition', compact('positions'));
+        return view('position.createPosition');
     }
 
     // 'store' method: Creates a new position.
